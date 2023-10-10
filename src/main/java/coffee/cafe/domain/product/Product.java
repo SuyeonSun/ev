@@ -29,4 +29,9 @@ public class Product {
     // @OneToOne
     // PRICE  	STOCK  	NUMBER  	PRODUCT_DETAIL_ID  	NAME
     private ProductDetail productDetail;
+
+    // 다대일
+    @ManyToOne
+    @JoinColumn(name = "provider_id")
+    private Provider provider;
 }

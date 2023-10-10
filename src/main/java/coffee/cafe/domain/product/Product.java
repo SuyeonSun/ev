@@ -22,6 +22,11 @@ public class Product {
     @Column(nullable = false)
     private Integer stock;
 
+    // 일대일 단방향
     @OneToOne(mappedBy = "product")
+    // PRICE  	STOCK  	NUMBER  	NAME
+    // 일대일 양방향
+    // @OneToOne
+    // PRICE  	STOCK  	NUMBER  	PRODUCT_DETAIL_ID  	NAME
     private ProductDetail productDetail;
 }
